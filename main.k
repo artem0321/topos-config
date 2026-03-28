@@ -119,3 +119,8 @@ redis_cache = {
         version = "7.2"
     }
 }
+
+test_srv = {
+    name = "test-srv"
+    owner = "test-srv"
+}

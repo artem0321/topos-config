@@ -124,6 +124,10 @@ payment_service = {
     }
     dependencies = [
         {target = "postgres_db", type = "postgres", metadata = {database = "payments"}}
+        {
+            target = "billing_service"
+            type = "grpc"
+        }
     ]
 }
 
@@ -134,4 +138,9 @@ redis_cache = {
         mode = "cluster"
         version = "7.2"
     }
+}
+
+billing_service = {
+    name = "Billing Service"
+    owner = "billing-team"
 }

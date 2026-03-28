@@ -135,3 +135,14 @@ test = {
     name = "test"
     owner = "test"
 }
+
+test_2 = {
+    name = "test-2"
+    owner = "test"
+    dependencies += [
+        {
+            target = "test"
+            type = "http"
+        }
+    ]
+}

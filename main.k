@@ -143,4 +143,10 @@ redis_cache = {
 billing_service = {
     name = "Billing Service"
     owner = "billing-team"
+    dependencies += [
+        {
+            target = "postgres_db"
+            type = "postgres"
+        }
+    ]
 }

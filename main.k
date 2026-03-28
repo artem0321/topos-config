@@ -123,10 +123,12 @@ payment_service = {
         port = "9200"
     }
     dependencies = [
-        {target = "postgres_db", type = "postgres", metadata = {database = "payments"}}
         {
-            target = "billing_service"
-            type = "grpc"
+            target = "postgres_db"
+            type = "postgres"
+            metadata = {
+                database = "payments"
+            }
         }
     ]
 }
@@ -138,15 +140,4 @@ redis_cache = {
         mode = "cluster"
         version = "7.2"
     }
-}
-
-billing_service = {
-    name = "Billing Service"
-    owner = "billing-team"
-    dependencies += [
-        {
-            target = "postgres_db"
-            type = "postgres"
-        }
-    ]
 }

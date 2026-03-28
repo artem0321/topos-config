@@ -115,24 +115,6 @@ auth_service = {
     ]
 }
 
-payment_service = {
-    name = "Payment Service"
-    owner = "payments-team"
-    metadata = {
-        language = "go"
-        port = "9200"
-    }
-    dependencies = [
-        {
-            target = "postgres_db"
-            type = "postgres"
-            metadata = {
-                database = "payments"
-            }
-        }
-    ]
-}
-
 redis_cache = {
     name = "Redis Cache"
     owner = "platform-team"

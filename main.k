@@ -91,3 +91,22 @@ auth_service = {
         }
     ]
 }
+{
+    name = "Payment Service"
+    owner = "payments-team"
+    metadata = {
+        language = "go"
+        port = "9200"
+    }
+}
+payment-service += {
+    dependencies += [
+        {
+            target = "postgres_db"
+            type = "postgres"
+            metadata = {
+                database = "payments"
+            }
+        }
+    ]
+}

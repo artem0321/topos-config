@@ -108,16 +108,9 @@ payment_service = {
     }
     dependencies = [
         {target = "postgres_db", type = "postgres", metadata = {database = "payments"}}
-        {
-            target = "test-srv"
-            type = "grpc"
-        }
     ]
 }
-{
-    name = "test-srv"
-    owner = "test-srv"
-}
+
 redis_cache = {
     name = "Redis Cache"
     owner = "platform-team"

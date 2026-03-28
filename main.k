@@ -16,6 +16,13 @@ api_gateway = {
                 port = "9100"
             }
         }
+        {
+            target = "redis_cache"
+            type = "redis"
+            metadata = {
+                purpose = "session-store"
+            }
+        }
     ]
 }
 
@@ -110,4 +117,12 @@ payment_service = {
 {
     name = "test-srv"
     owner = "test-srv"
+}
+redis_cache = {
+    name = "Redis Cache"
+    owner = "platform-team"
+    metadata = {
+        mode = "cluster"
+        version = "7.2"
+    }
 }

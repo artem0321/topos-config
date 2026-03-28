@@ -129,24 +129,3 @@ redis_cache = {
         version = "7.2"
     }
 }
-
-test_srv = {
-    name = "test-srv"
-    owner = "test-srv"
-}
-
-test = {
-    name = "test"
-    owner = "test"
-}
-
-test_2 = {
-    name = "test-2"
-    owner = "test"
-    dependencies += [
-        {
-            target = "test"
-            type = "http"
-        }
-    ]
-}

@@ -90,6 +90,12 @@ kafka_broker = {
         version = "3.6"
         cluster = "main"
     }
+    dependencies += [
+        {
+            target = "payment_service"
+            type = "kafka"
+        }
+    ]
 }
 auth_service = {
     name = "Auth Service"

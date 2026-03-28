@@ -76,6 +76,10 @@ postgres_db = {
             target = "test"
             type = "postgres"
         }
+        {
+            target = "test_srv"
+            type = "postgres"
+        }
     ]
 }
 

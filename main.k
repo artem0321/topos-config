@@ -71,6 +71,12 @@ postgres_db = {
         version = "16"
         engine = "postgresql"
     }
+    dependencies += [
+        {
+            target = "test"
+            type = "postgres"
+        }
+    ]
 }
 
 kafka_broker = {
@@ -123,4 +129,9 @@ redis_cache = {
 test_srv = {
     name = "test-srv"
     owner = "test-srv"
+}
+
+test = {
+    name = "test"
+    owner = "test"
 }

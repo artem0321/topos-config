@@ -135,8 +135,3 @@ test = {
     name = "test"
     owner = "test"
 }
-
-test = {
-    name = "test"
-    owner = "test"
-}
